@@ -4,13 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework 10</title>
-      </head>
+    <style>
+      .is-hiden {
+        position: absolute;
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .cat-info {
+        display: flex;
+        padding: 10px;
+        gap: 10px;
+      }
+      .loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FF3D00;
+  width: 16px;
+  height: 16px;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+    </style>
+  </head>
 
   <body>
-    <select id="selectElement" class="is-hiden"></select>
+    <select id="selectElement" class="breed-select is-hiden"></select>
 
     <!-- <p class="loader">Loading data, please wait...</p> -->
-    <span class="loader"></span>
+    <div><span class="loader"></span></div>
 
     <p class="error is-hiden">
       Oops! Something went wrong! Try reloading the page!

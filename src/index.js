@@ -4,7 +4,7 @@ import axios from 'axios';
 import { fetchBreeds, fetchCatByBreed } from './cat-api';
 
 axios.defaults.headers.common['x-api-key'] =
-  'live_q5LvmDUcFbCBtm8ROnthtrdBTFJRxGWZbZSZC26kso3jLf7vspxBPqVoKleNH3Ur';
+  'live_ qmXsCpaZo5F8CHTPwhdqdxDGs4CXgH cVRQrkSLjFufIdIX3U6CoElNngQxfD v7ur';
 
 import {
   selectBreed,
